@@ -1,0 +1,104 @@
+{
+  "name": "pino-prettifier",
+  "version": "0.0.0",
+  "description": "Development mode prettifier for Pino",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lifion/pino-prettifier.git"
+  },
+  "keywords": [
+    "pino",
+    "prettifier",
+    "lifion"
+  ],
+  "author": "Edgardo Avilés <Edgardo.Aviles@ADP.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lifion/pino-prettifier/issues"
+  },
+  "homepage": "https://github.com/lifion/pino-prettifier#readme",
+  "main": "lib/index.js",
+  "engines": {
+    "node": ">=8.6.0"
+  },
+  "scripts": {
+    "eslint": "eslint . --ext .js,.json",
+    "format": "prettier --write '**/*.{md,js,json}' '!reports/**/*.{js,json}'",
+    "jest": "JEST_JUNIT_OUTPUT=./reports/junit/js-test-results.xml jest",
+    "jest-watch": "npm run jest -- --watch --coverageReporters=html",
+    "lint": "eslint . --ext .js,.json --format junit -o ./reports/junit/js-lint-results.xml",
+    "prepare": "check-engines",
+    "test": "npm run jest -- --ci --runInBand && codecov",
+    "version": "auto-changelog -p && git add CHANGELOG.md"
+  },
+  "devDependencies": {
+    "auto-changelog": "^1.11.0",
+    "check-engines": "^1.5.0",
+    "codecov": "^3.2.0",
+    "eslint": "^5.14.1",
+    "eslint-config-lifion": "^1.1.0",
+    "hex-debug": "^2.0.2",
+    "husky": "^1.3.1",
+    "jest": "^24.1.0",
+    "jest-junit": "^6.3.0",
+    "lint-staged": "^8.1.4",
+    "prettier": "^1.16.4"
+  },
+  "auto-changelog": {
+    "commitLimit": false,
+    "template": "./templates/CHANGELOG.hbs"
+  },
+  "eslintConfig": {
+    "extends": "lifion"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "**/*.js"
+    ],
+    "coverageDirectory": "../reports/coverage",
+    "coverageThreshold": {
+      "global": {
+        "statements": 100,
+        "branches": 100,
+        "functions": 100,
+        "lines": 100
+      }
+    },
+    "reporters": [
+      "default",
+      "jest-junit"
+    ],
+    "rootDir": "lib",
+    "testEnvironment": "node"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{json,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "printWidth": 100,
+    "singleQuote": true
+  },
+  "renovate": {
+    "branchPrefix": "feature/renovate-",
+    "engines": {
+      "enabled": false
+    },
+    "extends": [
+      "config:base"
+    ],
+    "rangeStrategy": "bump"
+  }
+}
