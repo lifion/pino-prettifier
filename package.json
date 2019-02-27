@@ -1,6 +1,6 @@
 {
   "name": "pino-prettifier",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Development mode prettifier for Pino",
   "repository": {
     "type": "git",
