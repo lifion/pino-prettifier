@@ -25,10 +25,10 @@
     "eslint": "eslint . --ext .js,.json",
     "format": "prettier --write '**/*.{md,js,json}' '!reports/**/*.{js,json}'",
     "jest": "JEST_JUNIT_OUTPUT=./reports/junit/js-test-results.xml jest",
-    "jest-watch": "npm run jest -- --watch --coverageReporters=html",
     "lint": "eslint . --ext .js,.json --format junit -o ./reports/junit/js-lint-results.xml",
     "prepare": "check-engines",
     "test": "npm run jest -- --ci --runInBand && codecov",
+    "test-watch": "npm run jest -- --watch --coverageReporters=html",
     "version": "auto-changelog -p && git add CHANGELOG.md"
   },
   "devDependencies": {
