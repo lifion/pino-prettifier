@@ -1,15 +1,17 @@
 {
   "name": "pino-prettifier",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Development mode prettifier for Pino",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lifion/pino-prettifier.git"
   },
   "keywords": [
+    "lifion",
+    "logger",
+    "logging",
     "pino",
-    "prettifier",
-    "lifion"
+    "prettifier"
   ],
   "author": "Edgardo Avilés <Edgardo.Aviles@ADP.com>",
   "license": "MIT",
@@ -24,23 +26,20 @@
   "scripts": {
     "eslint": "eslint . --ext .js,.json",
     "format": "prettier --write '**/*.{md,js,json}' '!reports/**/*.{js,json}'",
-    "jest": "JEST_JUNIT_OUTPUT=./reports/junit/js-test-results.xml jest",
-    "lint": "eslint . --ext .js,.json --format junit -o ./reports/junit/js-lint-results.xml",
     "prepare": "check-engines",
-    "test": "npm run jest -- --ci --runInBand && codecov",
-    "test-watch": "npm run jest -- --watch --coverageReporters=html",
+    "test": "jest --ci --runInBand && codecov",
+    "test-watch": "jest --watch --coverageReporters=html",
     "version": "auto-changelog -p && git add CHANGELOG.md"
   },
   "devDependencies": {
-    "auto-changelog": "^1.13.0",
+    "auto-changelog": "^1.14.1",
     "check-engines": "^1.5.0",
     "codecov": "^3.5.0",
     "eslint": "^6.0.1",
-    "eslint-config-lifion": "^1.2.3",
+    "eslint-config-lifion": "^1.2.5",
     "hex-debug": "^2.0.2",
     "husky": "^2.7.0",
     "jest": "^24.8.0",
-    "jest-junit": "^6.4.0",
     "lint-staged": "^8.2.1",
     "prettier": "^1.18.2"
   },
@@ -61,7 +60,7 @@
     "collectCoverageFrom": [
       "**/*.js"
     ],
-    "coverageDirectory": "../reports/coverage",
+    "coverageDirectory": "../coverage",
     "coverageThreshold": {
       "global": {
         "statements": 100,
@@ -70,10 +69,6 @@
         "lines": 100
       }
     },
-    "reporters": [
-      "default",
-      "jest-junit"
-    ],
     "rootDir": "lib",
     "testEnvironment": "node"
   },
