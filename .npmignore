@@ -1,5 +1,4 @@
 *.test.js
-.circleci
-.eslintignore
-reports
-templates
+/.*
+/coverage
+/templates
