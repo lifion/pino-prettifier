@@ -25,7 +25,7 @@
   },
   "scripts": {
     "eslint": "eslint . --ext .js,.json",
-    "format": "prettier --write '**/*.{md,js,json}' '!reports/**/*.{js,json}'",
+    "format": "prettier --write '**/*.{md,js,json}' '!coverage/**/*.{js,json}'",
     "prepare": "check-engines",
     "test": "jest --ci --runInBand && codecov",
     "test-watch": "jest --watch --coverageReporters=html",
@@ -35,7 +35,7 @@
     "auto-changelog": "^1.14.1",
     "check-engines": "^1.5.0",
     "codecov": "^3.5.0",
-    "eslint": "^6.0.1",
+    "eslint": "^5.16.0",
     "eslint-config-lifion": "^1.2.6",
     "hex-debug": "^2.0.2",
     "husky": "^3.0.0",
