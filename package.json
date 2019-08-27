@@ -20,7 +20,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lifion/pino-prettifier.git"
+    "url": "https://github.com/lifion/pino-prettifier.git"
   },
   "bugs": {
     "url": "https://github.com/lifion/pino-prettifier/issues"
@@ -60,7 +60,7 @@
   "@lifion/core-commons": {
     "autoDocs": false,
     "template": "public",
-    "updated": "2019-08-26T23:30:27.014Z",
+    "updated": "2019-08-27T00:08:18.771Z",
     "version": "2.3.3"
   }
 }
