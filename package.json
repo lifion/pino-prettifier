@@ -11,12 +11,13 @@
   ],
   "author": "Edgardo Avilés <Edgardo.Aviles@ADP.com>",
   "maintainers": [
-    "Chen Doron <Chen.Doron@ADP.com>",
+    "Bryan Oemler <Bryan.Oemler@ADP.com>",
     "Edgardo Avilés <Edgardo.Aviles@ADP.com>",
-    "Jenny Eckstein <Jenny.Eckstein@ADP.com>",
-    "Zaid Masud <Zaid.Masud@ADP.com>"
+    "Jenny Eckstein <Jenny.Eckstein@ADP.com>"
   ],
-  "contributors": [],
+  "contributors": [
+    "Chen Doron <Chen.Doron@ADP.com>"
+  ],
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -42,13 +43,13 @@
     "auto-changelog": "^2.2.1",
     "check-engines": "^1.5.0",
     "codecov": "^3.8.1",
-    "eslint": "^7.20.0",
-    "eslint-config-lifion": "^1.4.0",
+    "eslint": "^7.21.0",
+    "eslint-config-lifion": "^2.0.2",
     "hex-debug": "^2.0.2",
     "husky": "^4.3.8",
     "jest": "^26.6.3",
     "lint-staged": "^10.5.4",
-    "prettier": "^1.19.1"
+    "prettier": "^2.2.1"
   },
   "husky": {
     "hooks": {

@@ -1,4 +1,9 @@
 {
+  "assignees": [
+    "eaviles",
+    "jennyEckstein",
+    "BizzlePop34"
+  ],
   "branchPrefix": "feature/renovate-",
   "engines": {
     "enabled": false
