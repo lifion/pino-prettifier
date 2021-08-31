@@ -43,17 +43,17 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "auto-changelog": "^2.2.1",
+    "auto-changelog": "^2.3.0",
     "check-engines": "^1.5.0",
-    "codecov": "^3.8.1",
-    "eslint": "^7.22.0",
-    "eslint-config-lifion": "^2.0.2",
+    "codecov": "^3.8.3",
+    "eslint": "^7.32.0",
+    "eslint-config-lifion": "^2.1.1",
     "hex-debug": "^2.0.2",
-    "husky": "^6.0.0",
-    "jest": "^26.6.3",
+    "husky": "^7.0.2",
+    "jest": "^27.1.0",
     "lint-staged": "^10.5.4",
     "pinst": "^2.1.6",
-    "prettier": "^2.2.1"
+    "prettier": "^2.3.2"
   },
   "@lifion/core-commons": {
     "autoDocs": false,
