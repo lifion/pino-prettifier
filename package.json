@@ -50,7 +50,7 @@
     "eslint-config-lifion": "^2.1.1",
     "hex-debug": "^2.0.2",
     "husky": "^7.0.2",
-    "jest": "^27.1.0",
+    "jest": "^28.1.0",
     "lint-staged": "^10.5.4",
     "pinst": "^2.1.6",
     "prettier": "^2.3.2"
